@@ -8,7 +8,7 @@ $filename = $_GET['file'] ?? '';
 // 入力がホワイトリストにあるか確認
 if (!in_array($filename, $whitelist, true)) {
   http_response_code(403);
-  exit("見せられないよ！");
+  exit("アクセスブロックしました！見せられないよ！");
 }
 
 // パス構築（files ディレクトリ内）
